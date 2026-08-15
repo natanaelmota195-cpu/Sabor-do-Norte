@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const slideInterval = 3000; // <-- variável editável: intervalo de troca dos pratos (ms)
 
   const pratosDestaque = [
-    { nome: 'Maniçoba',     image: 'imagens/img.maniçoba.png', tag: ' "Feijoada paraense" ' },
-    { nome: 'Pato no Tucupi', image: 'imagens/img.pato_no_tucupi-removebg-preview.png', tag: 'Tradição da Amazônia' },
-    { nome: 'Tacacá',      image: 'imagens/img.tacacá.png', tag: 'Prato típico paraense' },
-    { nome: 'Vatapá',      image: 'imagens/img.vatapá camarão.png', tag: 'Creme de camarão regional' },
+    { nome: 'Maniçoba',     image: 'manicoba.png', tag: ' "Feijoada paraense" ' },
+    { nome: 'Pato no Tucupi', image: 'pato_no_tucupi-removebg-preview.png', tag: 'Tradição da Amazônia' },
+    { nome: 'Tacacá',      image: 'tacaca.png', tag: 'Prato típico paraense' },
+    { nome: 'Vatapá',      image: 'vatapa camarao.png', tag: 'Creme de camarão regional' },
   ];
 
   const dishDisplay = document.getElementById('dishDisplay');
@@ -297,13 +297,13 @@ document.addEventListener('DOMContentLoaded', () => {
      5. GALERIA
   ------------------------------------------------------------------------ */
   const itensGaleria = [
-    { nome: 'Tacacá servido na cuia', image: 'imagens/img.tacacá.png' },
+    { nome: 'Tacacá servido na cuia', image: 'tacaca.png' },
     { nome: 'Açaí na tigela', image: 'imagens/images.jpg' },
     { nome: 'Pato no tucupi', image: 'imagens/img.pato_no_tucupi-removebg-preview.png' },
-    { nome: 'Maniçoba', image: 'imagens/img.maniçoba.png' },
+    { nome: 'Maniçoba', image: 'maniçoba.png' },
     { nome: 'Ingredientes amazônicos', image: 'imagens/images (1).jpg' },
     { nome: 'Ambiente do restaurante', image: 'imagens/img.sobre.png' },
-    { nome: 'Vatapá amazônico', image: 'imagens/img.vatapá camarão.png' },
+    { nome: 'Vatapá amazônico', image: 'vatapá camarão.png' },
     { nome: 'Prato e cultura', image: 'imagens/images.jpg' },
   ];
 
