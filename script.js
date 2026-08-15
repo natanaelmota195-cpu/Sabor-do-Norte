@@ -297,13 +297,13 @@ document.addEventListener('DOMContentLoaded', () => {
      5. GALERIA
   ------------------------------------------------------------------------ */
   const itensGaleria = [
-    { nome: 'Tacacá servido na cuia', image: 'tacaca.png' },
-    { nome: 'Açaí na tigela', image: 'imagens/images.jpg' },
+    { nome: 'Tacaca servido na cuia', image: 'tacaca.png' },
+    { nome: 'Acai na tigela', image: 'imagens/images.jpg' },
     { nome: 'Pato no tucupi', image: 'patonotucupi.png' },
-    { nome: 'Maniçoba', image: 'maniçoba.png' },
-    { nome: 'Ingredientes amazônicos', image: 'imagens/images (1).jpg' },
+    { nome: 'Manicoba', image: 'maniçoba.png' },
+    { nome: 'Ingredientes amazonicos', image: 'imagens/images (1).jpg' },
     { nome: 'Ambiente do restaurante', image: 'sobre.png' },
-    { nome: 'Vatapá amazônico', image: 'vatapá camarão.png' },
+    { nome: 'Vatapa amazonico', image: 'vatapá camarão.png' },
     { nome: 'Prato e cultura', image: 'imagens/images.jpg' },
   ];
 
