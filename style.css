@@ -950,7 +950,7 @@ button:focus-visible,
   position: relative;
   overflow: hidden;
   /* imagem de fundo para a seção SOBRE */
-  background-image: url('imagens/img.sobre.png');
+  background-image: url('sobre.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
