@@ -298,13 +298,13 @@ document.addEventListener('DOMContentLoaded', () => {
   ------------------------------------------------------------------------ */
   const itensGaleria = [
     { nome: 'Tacaca servido na cuia', image: 'tacaca.png' },
-    { nome: 'Acai na tigela', image: 'imagens/images.jpg' },
+    { nome: 'Acai na tigela', image: 'galeriaimage.jpg' },
     { nome: 'Pato no tucupi', image: 'patonotucupi.png' },
-    { nome: 'Manicoba', image: 'maniçoba.png' },
-    { nome: 'Ingredientes amazonicos', image: 'imagens/images (1).jpg' },
+    { nome: 'Manicoba', image: 'manicoba.png' },
+    { nome: 'Ingredientes amazonicos', image: 'galeriaimages.jpg' },
     { nome: 'Ambiente do restaurante', image: 'sobre.png' },
-    { nome: 'Vatapa amazonico', image: 'vatapá camarão.png' },
-    { nome: 'Prato e cultura', image: 'imagens/images.jpg' },
+    { nome: 'Vatapa amazonico', image: 'vatapa camarao.png' },
+    { nome: 'Prato e cultura', image: 'galeriaimages.jpg' },
   ];
 
   const galleryGrid = document.getElementById('galleryGrid');
