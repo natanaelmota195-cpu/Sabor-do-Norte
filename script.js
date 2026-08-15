@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const pratosDestaque = [
     { nome: 'Maniçoba',     image: 'manicoba.png', tag: ' "Feijoada paraense" ' },
-    { nome: 'Pato no Tucupi', image: 'pato_no_tucupi-removebg-preview.png', tag: 'Tradição da Amazônia' },
+    { nome: 'Pato no Tucupi', image: 'patonotucupi.png', tag: 'Tradição da Amazônia' },
     { nome: 'Tacacá',      image: 'tacaca.png', tag: 'Prato típico paraense' },
     { nome: 'Vatapá',      image: 'vatapa camarao.png', tag: 'Creme de camarão regional' },
   ];
@@ -299,10 +299,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const itensGaleria = [
     { nome: 'Tacacá servido na cuia', image: 'tacaca.png' },
     { nome: 'Açaí na tigela', image: 'imagens/images.jpg' },
-    { nome: 'Pato no tucupi', image: 'imagens/img.pato_no_tucupi-removebg-preview.png' },
+    { nome: 'Pato no tucupi', image: 'patonotucupi.png' },
     { nome: 'Maniçoba', image: 'maniçoba.png' },
     { nome: 'Ingredientes amazônicos', image: 'imagens/images (1).jpg' },
-    { nome: 'Ambiente do restaurante', image: 'imagens/img.sobre.png' },
+    { nome: 'Ambiente do restaurante', image: 'sobre.png' },
     { nome: 'Vatapá amazônico', image: 'vatapá camarão.png' },
     { nome: 'Prato e cultura', image: 'imagens/images.jpg' },
   ];
