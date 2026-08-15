@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabor do Norte | Comida e Cultura da Amazônia</title>
+<meta name="description" content="Sabor do Norte — restaurante especializado em comidas e bebidas típicas da região Norte do Brasil. Tacacá, Pato no Tucupi, Maniçoba, Açaí e muito mais.">
+
+<!-- Google Fonts: Black Ops One (títulos/navegação) + Oxygen (textos) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%237ED957'/%3E%3Ctext x='50' y='62' font-size='50' text-anchor='middle'%3E🌿%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ===================== BOTÃO PULAR PARA CONTEÚDO (acessibilidade) ===================== -->
+<a href="#inicio" class="skip-link">Pular para o conteúdo</a>
+
+<!-- ===================== HEADER / NAVBAR ===================== -->
+<header class="header" id="header">
+  <div class="header__inner container">
+     <a href="#inicio" class="logo" aria-label="Voltar ao início">
+      <img src="imagens/img.logo.png" alt="Sabor do Norte - Restaurante" class="site-logo">
+    </a>
+
+    <nav class="nav" id="nav">
+      <ul class="nav__list">
+        <li><a href="#inicio" class="nav__link active-link">INÍCIO</a></li>
+        <li><a href="#cardapio" class="nav__link">CARDÁPIO</a></li>
+        <li><a href="#galeria" class="nav__link">GALERIA</a></li>
+        <li><a href="#contatos" class="nav__link">CONTATOS</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- overlay escuro atrás do menu mobile -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main>
+
+  <!-- ===================== HERO / INÍCIO ===================== -->
+  <section class="hero" id="inicio">
+    <!-- formas orgânicas decorativas de fundo -->
+    <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+
+    <div class="hero__inner container">
+
+      <div class="hero__text" data-animate="fade-right">
+        <span class="eyebrow">🌿 CULINÁRIA AMAZÔNICA</span>
+        <h1 class="hero__title">O SABOR DA <span>AMAZÔNIA</span> NA SUA MESA</h1>
+        <p class="hero__desc">Uma experiência de sabores, aromas e ingredientes que representam a riqueza da região Norte do Brasil.</p>
+
+        <div class="hero__buttons">
+          <a href="#cardapio" class="btn btn--primary">VER CARDÁPIO</a>
+          <a href="#sobre" class="btn btn--outline">CONHEÇA O SABOR DO NORTE</a>
+        </div>
+      </div>
+
+      <div class="hero__dish-area" data-animate="fade-left">
+
+        <!-- cartão flutuante superior direito -->
+        <div class="floating-card floating-card--top" id="floatCardTop">
+          <span class="floating-card__emoji">🫐</span>
+          <div>
+            <strong>Açaí</strong>
+            <small>Puro da floresta</small>
+          </div>
+        </div>
+
+        <!-- cartão flutuante inferior esquerdo -->
+        <div class="floating-card floating-card--bottom" id="floatCardBottom">
+          <span class="floating-card__emoji">🌶️</span>
+          <div>
+            <strong>Pimenta-de-cheiro</strong>
+            <small>Tempero regional</small>
+          </div>
+        </div>
+
+        <!-- palco do prato principal -->
+        <div class="dish-stage">
+          <div class="dish-stage__plate">
+            <div id="dishDisplay">
+              <!-- conteúdo trocado via JS -->
+            </div>
+          </div>
+          <div class="dish-stage__label" id="dishLabel"><!-- rótulo trocado via JS --></div>
+
+          <!-- ingredientes flutuantes ao redor do prato -->
+          <span class="ingredient ingredient--1" aria-hidden="true">🌶️</span>
+          <span class="ingredient ingredient--2" aria-hidden="true">🍃</span>
+          <span class="ingredient ingredient--3" aria-hidden="true">🍋</span>
+          <span class="ingredient ingredient--4" aria-hidden="true">🌰</span>
+          <span class="ingredient ingredient--5" aria-hidden="true">🫐</span>
+          <span class="ingredient ingredient--6" aria-hidden="true">🌿</span>
+        </div>
+
+        <!-- indicadores do prato atual -->
+        <div class="dish-indicators" id="dishIndicators" role="tablist" aria-label="Selecionar prato em destaque">
+          <!-- pontos gerados via JS -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== CARDÁPIO ===================== -->
+  <section class="menu-section" id="cardapio">
+    <div class="container">
+      <div class="section-heading" data-animate="fade-up">
+        <span class="eyebrow eyebrow--center">NOSSA COZINHA</span>
+        <h2 class="section-title">NOSSO CARDÁPIO</h2>
+        <p class="section-subtitle">Sabores que contam a história da Amazônia.</p>
+      </div>
+
+      <!-- abas de categoria -->
+      <div class="menu-tabs" data-animate="fade-up">
+        <button class="menu-tab active-tab" data-category="comidas">COMIDAS</button>
+        <button class="menu-tab" data-category="bebidas">BEBIDAS</button>
+        <button class="menu-tab" data-category="sobremesas">SOBREMESAS</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- cards gerados dinamicamente via JS a partir de js/script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="about" id="sobre">
+    <div class="container about__inner">
+      <div class="about__image" data-animate="fade-right">
+        <!-- A imagem de fundo da seção SOBRE foi movida para o CSS (background) -->
+        <div class="about__image-box" aria-hidden="true"></div>
+        <div class="about__image-deco about__image-deco--1" aria-hidden="true">🌴</div>
+        <div class="about__image-deco about__image-deco--2" aria-hidden="true">🪶</div>
+      </div>
+
+      <div class="about__text" data-animate="fade-left">
+        <span class="eyebrow">NOSSA HISTÓRIA</span>
+        <h2 class="section-title section-title--left">UMA VIAGEM PELOS SABORES DO NORTE</h2>
+        <p>O Sabor do Norte nasceu do desejo de levar até a sua mesa a verdadeira culinária amazônica: ingredientes frescos, receitas passadas de geração em geração e o tempero inconfundível da região Norte do Brasil.</p>
+        <p>Do tucupi ao açaí, da jambu à castanha-do-pará, cada prato é preparado para contar uma história de cultura, floresta e acolhimento paraense.</p>
+
+        <ul class="about__list">
+          <li>🌿 Ingredientes 100% amazônicos</li>
+          <li>👩‍🍳 Receitas tradicionais do Pará</li>
+          <li>💚 Feito com acolhimento e energia</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERIA ===================== -->
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="section-heading" data-animate="fade-up">
+        <span class="eyebrow eyebrow--center">MOMENTOS</span>
+        <h2 class="section-title">GALERIA</h2>
+        <p class="section-subtitle">Pratos, ingredientes e o clima do Sabor do Norte.</p>
+      </div>
+
+      <div class="gallery__grid" id="galleryGrid">
+        <!-- itens gerados via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATOS ===================== -->
+  <section class="contact" id="contatos">
+    <div class="container contact__inner">
+      <div class="contact__info" data-animate="fade-right">
+        <span class="eyebrow">ESTAMOS AQUI</span>
+        <h2 class="section-title section-title--left">FALE CONOSCO</h2>
+
+        <ul class="contact__list">
+          <li>
+            <span class="contact__icon">📍</span>
+            <div>
+              <strong>Endereço</strong>
+              <p>Travessa Adolfo Macedo, Nº 719<br>Bairro Buritizal — Almeirim, Pará</p>
+            </div>
+          </li>
+          <li>
+            <span class="contact__icon">📞</span>
+            <div>
+              <strong>Telefone</strong>
+              <p>(93) 98411-8677</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="contact__buttons">
+          <a href="https://wa.me/5593984118677" class="btn btn--primary" target="_blank" rel="noopener">WHATSAPP</a>
+          <a href="https://instagram.com" class="btn btn--outline" target="_blank" rel="noopener">INSTAGRAM</a>
+          <a href="https://maps.google.com/?q=Travessa+Adolfo+Macedo+719+Almeirim+Para" class="btn btn--outline" target="_blank" rel="noopener">GOOGLE MAPS</a>
+        </div>
+      </div>
+
+      <div class="contact__map" data-animate="fade-left">
+        <!-- SUBSTITUIR pelo endereço definitivo do Google Maps quando disponível -->
+        <iframe
+          title="Localização do Sabor do Norte"
+          src="https://www.google.com/maps?q=Almeirim,+Par%C3%A1&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#inicio" class="logo logo--footer" aria-label="Voltar ao início">
+        <img src="imagens/img.logo.png" alt="Sabor do Norte - Restaurante" class="site-logo site-logo--footer">
+      </a>
+      <p>Sabores da Amazônia que ficam na memória.</p>
+    </div>
+
+    <nav class="footer__nav" aria-label="Links do rodapé">
+      <a href="#inicio">Início</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contatos">Contatos</a>
+    </nav>
+
+    <div class="footer__social">
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm6.25-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://wa.me/5593984118677" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20.52 3.48A11.65 11.65 0 0 0 12.03 1a11.75 11.75 0 0 0-10.2 17.86L1 23l4.24-1.11A11.75 11.75 0 0 0 12.04 23 11.74 11.74 0 0 0 20.52 3.48zm-8.48 17.29a9.71 9.71 0 0 1-4.95-1.35l-.35-.21-2.52.66.67-2.45-.23-.35A9.72 9.72 0 1 1 12.04 20.77zm5.35-7.28c-.29-.15-1.72-.85-1.99-.95s-.46-.15-.66.15-.77.95-.94 1.14-.35.22-.64.07a7.97 7.97 0 0 1-2.35-1.45 8.82 8.82 0 0 1-1.63-2.03c-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.51l-.56-.01a1.09 1.09 0 0 0-.79.37 3.31 3.31 0 0 0-1 2.44 5.74 5.74 0 0 0 1.2 3.06 12.28 12.28 0 0 0 4.7 4.16 5.84 5.84 0 0 0 2.82.77c1.36.08 2.65-.58 3.02-1.12.37-.54.37-.99.26-1.12-.11-.13-.41-.2-.86-.35z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M13.5 22v-8h2.7l.4-3h-3.1V7.5c0-.87.27-1.5 1.6-1.5H16V3.1c-.28-.04-1.25-.1-2.38-.1-2.35 0-4.12 1.43-4.12 4.06V11H7v3h2.5v8h4z" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <p class="footer__copy">© 2026 Sabor do Norte. Todos os direitos reservados.</p>
+</footer>
+
+<!-- ===================== BOTÃO VOLTAR AO TOPO ===================== -->
+<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+<!-- ===================== MODAL DA GALERIA ===================== -->
+<div class="modal" id="galleryModal" aria-hidden="true">
+  <div class="modal__overlay" id="modalOverlay"></div>
+  <div class="modal__content">
+    <button class="modal__close" id="modalClose" aria-label="Fechar imagem">✕</button>
+    <img src="" alt="" id="modalImage">
+    <p id="modalCaption" class="modal__caption"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
